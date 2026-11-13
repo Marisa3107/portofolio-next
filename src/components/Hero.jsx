@@ -9,7 +9,7 @@ export default function Hero ({ nama, tagline }) {
             width={180}
             height={180}
             loading="eager"
-            className="rounded-full border-4 border-aksen"/>
+            className="rounded-full border-4 border-aksen object-cover aspect-square"/>
             <div>  
             <h1 className="text-3xl font-bold text-utama md:text-5xl">Halo, saya {nama}!</h1>
             <p className="mt-3 text-lg text-gray-700">{tagline}</p>
