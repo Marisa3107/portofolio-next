@@ -5,7 +5,7 @@ const skills = [
   { nama: "HTML", level: "Menengah" },
   { nama: "CSS", level: "Menengah" },
   { nama: "Git dan Github", level: "Dasar" },
-  { nama: "Desain poster dengan Canva", level: "Menengah" },
+  { nama: "Desain poster dengan Canva", level: "Mahir" },
   { nama: "JavaScript", level: "Dasar" },
 ]
 
