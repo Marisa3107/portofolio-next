@@ -12,7 +12,7 @@ export default function ProyekCard({ proyek }) {
         alt={`Tangkapan layar ${proyek.judul}`}
         width={640}
         height={420}
-        className="h-auto w-full"
+        className="h-48 object-cover object-top"
       />
       <div className="p-5">
         <span className="rounded-full bg-latar px-3 py-1 text-xs font-semibold text-utama">{proyek.kategori}</span>

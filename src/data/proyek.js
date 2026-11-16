@@ -4,7 +4,7 @@ export const proyek = [
         judul: "Kalkulator Kalori & Nutrisi",
         kategori: "JavaScript",
         minggu: "Minggu 1",
-        gambar: "/proyek/1.png",
+        gambar: "/proyek/calorix.png",
         deskripsi: "Antarmuka (frontend) platform gizi cerdas berbasis web untuk membantu perhitungan kalori dan pemantauan nutrisi.",
         fitur: [
         "Desain antarmuka kalkulator kalori dan nutrisi berbasis sains",
@@ -18,7 +18,7 @@ export const proyek = [
         judul: "To-Do List App",
         kategori: "JavaScript",
         minggu: "Minggu 2",
-        gambar: "/proyek/2.png",
+        gambar: "/proyek/todo-list.png",
         deskripsi: "Aplikasi daftar tugas harian sederhana berbasis web untuk mencatat dan memantau progres pekerjaan.",
         fitur: [
         "Input penambahan daftar tugas baru",
@@ -32,7 +32,7 @@ export const proyek = [
         judul: "Kalkulator Web (Light & Dark Mode)",
         kategori: "JavaScript",
         minggu: "Minggu 3",
-        gambar: "/proyek/3.png",
+        gambar: "/proyek/calculate.png",
         deskripsi: "Aplikasi kalkulator berbasis web dengan fitur peralihan tema gelap (dark mode) dan terang (light mode).",
         fitur: [
         "Operasi matematika dasar beserta dukungan tanda kurung",
@@ -46,7 +46,7 @@ export const proyek = [
         judul: "Dompetku - Aplikasi Catatan Keuangan Harian",
         kategori: "JavaScript",
         minggu: "Minggu 4",
-        gambar: "/proyek/4.png",
+        gambar: "/proyek/dompetku.png",
         deskripsi: "Aplikasi web pencatat keuangan harian untuk memantau pemasukan, pengeluaran, dan batas anggaran bulanan.",
         fitur: [
         "Pencatatan transaksi pemasukan dan pengeluaran berdasarkan kategori dan tanggal",
@@ -60,7 +60,7 @@ export const proyek = [
         judul: "Moodverse - Write, Feel, Heal (Mood & Diary App)",
         kategori: "JavaScript",
         minggu: "Minggu 5",
-        gambar: "/proyek/5.png",
+        gambar: "/proyek/moodverse.png",
         deskripsi: "Aplikasi web personal untuk mencatat suasana hati harian, menulis jurnal pribadi, serta fitur interaktif seperti random thought dan confession generator.",
         fitur: [
         "Pemilih suasana hati (mood tracker) harian dengan berbagai ekspresi emoji",
@@ -74,7 +74,7 @@ export const proyek = [
         judul: "Program Hitung Biaya Parkir",
         kategori: "PHP",
         minggu: "Minggu 6",
-        gambar: "/proyek/6.png",
+        gambar: "/proyek/program-biaya-parkir.png",
         deskripsi: "Aplikasi web interaktif untuk menghitung total biaya parkir secara otomatis berdasarkan pilihan jenis kendaraan dan durasi waktu.",
         fitur: [
         "Form pilihan jenis kendaraan menggunakan elemen dropdown select",
