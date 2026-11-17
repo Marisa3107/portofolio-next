@@ -2,12 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { proyek } from "@/data/proyek";
 
-export async function generateMetadata({params}) {
-    const {slug} = await params;
-    const item = proyek.find ((p) => p.slug === slug);
+export async function generateMetadata({ params }) {
+    const { slug } = await params;
+    const item = proyek.find((p) => p.slug === slug);
 
     if (!item) {
-        return  { title: "Proyek tidak ditemukan" };
+        return { title: "Proyek tidak ditemukan" };
     }
     return { title: item.judul, description: item.deskripsi };
 }
@@ -16,15 +16,49 @@ export default async function DetailProyek({ params }) {
     const { slug } = await params;
     const item = proyek.find((p) => p.slug === slug);
 
+    // Antisipasi jika data tidak ditemukan
+    if (!item) {
+        return (
+            <main className="mx-auto max-w-3xl px-4 py-10 text-center">
+                <h1 className="text-2xl font-bold text-utama">Proyek tidak ditemukan</h1>
+            </main>
+        );
+    }
+
     return (
         <main className="mx-auto max-w-3xl px-4 py-10">
-            <Link href="/proyek" className="text-sm font-semibold text-aksen hover:underline">
-                &larr; Kembali ke daftar proyek
-            </Link>
-            <h1 className="mt-4 text-3xl font-bold text-utama md:text-4xl">{item.judul}</h1>
+            
+            {/* --- BREADCRUMB LANGSUNG DI SINI --- */}
+            <nav className="text-sm text-gray-500">
+                <ol className="flex items-center space-x-2">
+                    <li>
+                        <Link href="/" className="hover:text-aksen hover:underline">
+                            Beranda
+                        </Link>
+                    </li>
+                    <li className="text-gray-400">/</li>
+                    
+                    <li>
+                        <Link href="/proyek" className="hover:text-aksen hover:underline">
+                            Proyek
+                        </Link>
+                    </li>
+                    <li className="text-gray-400">/</li>
+                    
+                    <li className="font-semibold text-utama" aria-current="page">
+                        {item.judul}
+                    </li>
+                </ol>
+            </nav>
+            {/* ----------------------------------- */}
+
+            <h1 className="mt-6 text-3xl font-bold text-utama md:text-4xl">
+                {item.judul}
+            </h1>
             <p className="mt-2 text-gray-600">
                 {item.kategori} &middot; Dibuat di {item.minggu}
             </p>
+            
             <Image
                 src={item.gambar}
                 alt={`Tangkapan layar ${item.judul}`}
@@ -33,6 +67,7 @@ export default async function DetailProyek({ params }) {
                 loading="eager"
                 className="mt-6 h-auto w-full rounded-xl border border-gray-200" 
             />
+            
             <p className="mt-6 text-lg">{item.deskripsi}</p>
 
             <h2 className="mt-8 text-2xl font-bold text-utama">Yang Saya Pelajari</h2>
