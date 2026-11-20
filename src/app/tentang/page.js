@@ -23,17 +23,17 @@ const jadwalBelajar = [
 export default function Tentang() {
     return (
         <main className="mx-auto max-w-5xl space-y-8 px-4 py-10">
-            <h1 className="text-3xl font-bold text-utama md:text-4xl">Tentang Saya</h1>
+            <h1 className="text-3xl font-bold text-utama dark:text-sky-200 md:text-4xl">Tentang Saya</h1>
 
             <Kartu judul="Perkenalan">
-                <p className="leading-relaxed text-gray-700">
+                <p className="leading-relaxed text-gray-700 dark:text-gray-300">
                     Saya adalah siswa kelas XI jurusan Pengembangan Perangkat Lunak dan Gim, Saya memiliki ketertarikan di bidang teknologi. Saya ingin bisa membuat website yang rapi dan bermanfaat untuk sekolah dan masyarakat sekitar.
                 </p>
             </Kartu>
 
             <div className="grid gap-6 md:grid-cols-2">
                 <Kartu judul="Hobi">
-                    <ul className="list-disc space-y-1 pl-5 text-gray-700">
+                    <ul className="list-disc space-y-1 pl-5 text-gray-700 dark:text-gray-300">
                         <li>Mendengarkan Musik</li>
                         <li>Bersepeda</li>
                         <li>Bermain Badminton</li>
@@ -43,10 +43,10 @@ export default function Tentang() {
                 </Kartu>
 
                 <Kartu judul="Cita-cita">
-                    <p className="mb-3 text-gray-700">
+                    <p className="mb-3 text-gray-700 dark:text-gray-300">
                         Menjadi seorang Web Developer yang kreatif, dan mampu menghasilkan karya digital yang bermanfaat bagi banyak orang. Langkah yang akan saya lakukan:
                     </p>
-                    <ol className="list-decimal space-y-1 pl-5 text-gray-700">
+                    <ol className="list-decimal space-y-1 pl-5 text-gray-700 dark:text-gray-300">
                         <li>Tekun belajar dan memperdalam ilmu pemrograman.</li>
                         <li>Terus mengasah kemampuan dalam membuat dan mengembangkan website.</li>
                         <li>Mengembangkan kemampuan agar siap bersaing di dunia kerja bidang teknologi.</li>
@@ -64,7 +64,7 @@ export default function Tentang() {
 
             <Kartu judul="Jadwal Belajar">
                 <div className="overflow-x-auto">
-                    <table className="w-full border-collapse text-left text-sm text-gray-700">
+                    <table className="w-full border-collapse text-left text-sm text-gray-700 dark:text-gray-300">
                         <thead>
                             <tr className="bg-utama text-white">
                                 <th className="p-3">Hari</th>
@@ -74,7 +74,7 @@ export default function Tentang() {
                         </thead>
                         <tbody>
                             {jadwalBelajar.map((item, index) => (
-                                <tr key={index} className="border-b border-gray-200 hover:bg-gray-50">
+                                <tr key={index} className="border-b border-gray-200 dark:border-gray-700 hover:bg-gray-50">
                                     <td className="p-3 font-medium">{item.hari}</td>
                                     <td className="p-3">{item.waktu}</td>
                                     <td className="p-3">{item.kegiatan}</td>
