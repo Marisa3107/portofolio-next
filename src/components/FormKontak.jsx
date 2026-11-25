@@ -108,7 +108,7 @@ export default function FormKontak() {
                 {error.pesan && <p className="mt-1 text-sm text-aksen">{error.pesan}</p>}
             </div>
 
-            <button type="submit" className="rounded-lg bg-aksen px-5 py-2 font-semibold text-white">
+            <button type="submit" className="rounded-lg bg-utama px-5 py-2 font-semibold text-white">
                 Kirim Pesan
             </button>
 

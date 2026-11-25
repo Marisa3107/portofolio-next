@@ -1,4 +1,6 @@
 import FormKontak from "@/components/FormKontak";
+// 1. Wajib import komponen Card dari shadcn/ui
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata = {
     title: "Kontak",
@@ -14,25 +16,43 @@ export default function Kontak() {
             </p>
 
             <div className="mt-8 grid gap-6 md:grid-cols-3">
-                <section className="rounded-xl border border-border bg-card p-6 shadow-sm md:col-span-2">
-                    <FormKontak />
-                </section>
+                
+                {/* KARTU KIRI: Form Kontak */}
+                <Card className="md:col-span-2">
+                    <CardContent className="pt-6"> {/* pt-6 biar ada jarak atas */}
+                        <FormKontak />
+                    </CardContent>
+                </Card>
 
-                <aside className="rounded-xl bg-card p-6 shadow">
-                    <h2 className="text-lg font-bold text-primary">Temukan Saya di</h2>
-                    <ul className="mt-3 space-y-2 text-sm">
-                        <li>
-                            <a href="https://github.com/Marisa3107" target="_blank" rel="noopener noreferrer" className="text-aksen dark:text-sky-200 hover:underline">
-                                GitHub
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:marisaalzahraofc@gmail.com" className="text-aksen dark:text-sky-200 hover:underline">
-                                marisaalzahraofc@gmail.com
-                            </a>
-                        </li>
-                    </ul>
-                </aside>
+                {/* KARTU KANAN: Link GitHub & Email (Punyamu) */}
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="text-lg font-bold text-primary">Temukan Saya di</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <ul className="space-y-2 text-sm">
+                            <li>
+                                <a 
+                                    href="https://github.com/Marisa3107" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="text-aksen dark:text-sky-200 hover:underline"
+                                >
+                                    GitHub
+                                </a>
+                            </li>
+                            <li>
+                                <a 
+                                    href="mailto:marisaalzahraofc@gmail.com" 
+                                    className="text-aksen dark:text-sky-200 hover:underline"
+                                >
+                                    marisaalzahraofc@gmail.com
+                                </a>
+                            </li>
+                        </ul>
+                    </CardContent>
+                </Card>
+
             </div>
         </main>
     );
