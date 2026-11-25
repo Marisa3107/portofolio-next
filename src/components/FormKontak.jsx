@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const kelasInput = "mt-1 w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 p-2";
+const kelasInput = "mt-1 w-full rounded-lg border border-input bg-card p-2";
 
 export default function FormKontak() {
     const [nama, setNama] = useState("");
@@ -51,7 +51,7 @@ export default function FormKontak() {
                     placeholder="Contoh: Budi Santoso"
                     className={kelasInput}
                 />
-                {error.nama && <p className="mt-1 text-sm text-aksen dark:text-red-300">{error.nama}</p>}
+                {error.nama && <p className="mt-1 text-sm text-aksen">{error.nama}</p>}
             </div>
             
             <div>
@@ -65,7 +65,7 @@ export default function FormKontak() {
                     placeholder="nama@gmail.com"
                     className={kelasInput}
                 />
-                {error.email && <p className="mt-1 text-sm text-aksen dark:text-red-300">{error.email}</p>}
+                {error.email && <p className="mt-1 text-sm text-aksen">{error.email}</p>}
             </div>
 
             {/* SISA FORM DARI PAGE.JS DIPINDAH KE SINI */}
@@ -79,7 +79,7 @@ export default function FormKontak() {
                 onChange={(e) => setHp(e.target.value)} 
                 placeholder="081234567890" 
                 className={kelasInput} />
-                {error.hp && <p className="mt-1 text-sm text-aksen dark:text-red-300">{error.hp}</p>}
+                {error.hp && <p className="mt-1 text-sm text-aksen">{error.hp}</p>}
             </div>
 
             <div>
@@ -92,7 +92,7 @@ export default function FormKontak() {
                 <option value="kerja-sama">Kerja sama proyek</option>
                 <option value="lainnya">Lainnya</option>
                 </select>
-                {error.keperluan && <p className="mt-1 text-sm text-aksen dark:text-red-300">{error.keperluan}</p>}
+                {error.keperluan && <p className="mt-1 text-sm text-aksen">{error.keperluan}</p>}
             </div>
 
             <div>
@@ -105,14 +105,14 @@ export default function FormKontak() {
                 onChange={(e) => setPesan(e.target.value)} 
                 placeholder="Tulis pesanmu di sini" required 
                 className={kelasInput} />
-                {error.pesan && <p className="mt-1 text-sm text-aksen dark:text-red-300">{error.pesan}</p>}
+                {error.pesan && <p className="mt-1 text-sm text-aksen">{error.pesan}</p>}
             </div>
 
             <button type="submit" className="rounded-lg bg-aksen px-5 py-2 font-semibold text-white">
                 Kirim Pesan
             </button>
 
-            <p className="text-sm text-gray-600 dark:text-gray-400">
+            <p className="text-sm text-muted-foreground">
                 Form ini belum mengirim pesan. Pengiriman pesan diaktifkan di Minggu 15.
             </p>
 

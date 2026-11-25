@@ -2,9 +2,10 @@
 
 import { useState } from "react";
 import ProyekCard from "./ProyekCard";
+import { Button } from "@/components/ui/button";
 
 const daftarKategori = ["Semua", "HTML", "CSS", "JavaScript", "PHP", "Next.js"];
-const tombolBiasa = "rounded-full border border-utama dark:border-sky-200 px-4 py-1 text-sm font-semibold text-utama dark:text-sky-200";
+const tombolBiasa = "rounded-full border border-primary px-4 py-1 text-sm font-semibold text-primary";
 const tombolAktif = "rounded-full border border-aksen bg-aksen px-4 py-1 text-sm font-semibold text-white";
 
 export default function FilterProyek({ proyek }) {
@@ -24,9 +25,9 @@ export default function FilterProyek({ proyek }) {
         <div className="mt-8">
             <div className="flex flex-wrap gap-2">
                 {daftarKategori.map((k) => (
-                <button key={k} type="button" onClick={() => setKategori (k)} className={kategori === k ? tombolAktif : tombolBiasa}>
+                <Button key={k} variant={kategori === k ? "default" : "outline"} onClick={() => setKategori (k)}>
                     {k}
-                </button>
+                    </Button>
                 ))}
             </div>
 
@@ -40,18 +41,18 @@ export default function FilterProyek({ proyek }) {
                 value={kata}
                 onChange={(e) => setKata(e.target.value)}
                 placeholder="Contoh: kalkulator"
-                className="mt-1 w-full rounded-lg border border-gray-300 bg-white dark:bg-gray-800 p-2 md:w-80"/>
+                className="mt-1 w-full rounded-lg border border-gray-300 bg-card p-2 md:w-80"/>
                 {kata !== "" && (
-            <button
-            type="button"
-            onClick={() => setKata("")}
-            className="mt-2 text-sm font-semibold text-aksen dark:text-red-300 hover:underline"
+            <Button
+            variant="link"
+            onClick={() => setKata("") } 
+            className="mt2 px-0 text-aksen"
             >
             Hapus pencarian
-            </button>
+            </Button>
             )}
          </div>
-            <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+            <p className="mt-4 text-sm text-muted-foreground">
                 Menampilkan {hasil.length} dari {proyek.length} proyek
             </p>
 
@@ -61,7 +62,7 @@ export default function FilterProyek({ proyek }) {
             ))}
         </div>
             {hasil.length === 0 && (
-                <p className="mt-6 rounded-xl border border-dashed border-gray-300 p-6 text-center text-gray-600 dark:text-gray-400">Belum ada proyek yang cocok</p>
+                <p className="mt-6 rounded-xl border border-dashed border-gray-300 p-6 text-center text-muted-foreground">Belum ada proyek yang cocok</p>
             )}
         </div>
     );
